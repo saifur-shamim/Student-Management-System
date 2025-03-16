@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 class="text-2xl font-bold mb-4">Delete Student</h1>
+<p>Are you sure you want to delete "{{ student.name }}"?</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit" class="bg-red-500 text-white px-4 py-2 rounded">Delete</button>
+    <a href="{% url 'student_list' %}" class="bg-gray-500 text-white px-4 py-2 rounded">Cancel</a>
+</form>
+{% endblock %}
