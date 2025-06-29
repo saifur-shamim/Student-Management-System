@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1 class="text-2xl font-bold mb-4">Student List</h1>
-<a href="{% url 'student_create' %}" class="bg-blue-500 text-white px-4 py-2 rounded">Add Student</a>
+<h1 class="text-2xl font-bold mb-4 ml-2">Student List</h1>
+<a href="{% url 'student_create' %}" class="bg-blue-500 text-white px-4 py-2 rounded ml-2"><span class="text-lg font-bold mr-1">+</span>Add Student</a>
 <div class="mt-4">
     {% for student in students %}
     <div class="bg-white p-4 rounded shadow mb-2">
